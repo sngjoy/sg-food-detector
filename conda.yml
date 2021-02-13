@@ -1,0 +1,14 @@
+name: sg_food_detector
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.6.7
+  - pip=19.0.3
+  - pip:
+#    - modin==0.5.3
+    - numpy==1.18.5
+    - tensorflow==2.4.0
+    - pillow==8.0.0
+    - Flask==1.1.2
+    - waitress==1.4.4
