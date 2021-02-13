@@ -75,8 +75,24 @@ Here is a breakdown of the number of images used in each class.
 
 Data augmentation is used to increase the size of the dataset. In this model, shearing up to 15 degree is used to allow the model to recognise images that are taken from different angles. 
 
+## Unit Test
+Pytest was used to run the unit tests for this project. 
+
+Install pytest
+```
+pip install pytest
+```
+Unit test 1: Checking if model crashes when a corrupted image is uploaded.
+
+Unit test 2: Checking if model crashes when an image of a wrong format (anything but '.png', '.jpg', '.jpeg', '.jfif', '.gif') is uploaded.
+
+Unit test 3: Checking if the model used gives an output of 12 classes and their probabilities add up to 1.
+
+Unit test 4: Checking if the image shape after preprocessing is of 224 (height) x 224 (width) x 3 (channel). This is the requirement for the MobileNetV2 model that we are using for transfer learning.
+
 ## Future Developments
 - Improve on the API design
+- Deploy the webapp onto a cloud platform such as Heroku
 
 ## Author
 Joy Sng

@@ -9,9 +9,7 @@ path = os.path.dirname(__file__)
 img1 = os.path.join(path, 'kaya_toast.jpg')
 img2 = os.path.join(path, 'kaya_toasted.jpg') # corrupted image
 img3 = os.path.join(path, 'kaya_toast.wrong') # wrong image format
-#model_dir = re.sub(r"(.*assignment7)(.*)", r"\1/", path)
-#MODEL_DIR = os.path.join(model_dir, "tensorfood.h5")
-MODEL_DIR = '/builds/aiap/aiap7/all-assignments/assignment7/tensorfood.h5'
+MODEL_DIR = "model/tensorfood.h5"
 
 def test_image_integrity(img1=img1, img2=img2):
     assert inference._check_image_integrity(img1), 'Image is corrupted and unreadable.'
