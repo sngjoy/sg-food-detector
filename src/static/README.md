@@ -4,29 +4,6 @@ This project aims to classify 12 different Singapore food - chilli crab, curry p
 
 TensorFlow was used to build and train the CNN model. Flasks was used to build the web application.
 
-### Basic Usage
-#### Step 1:
-Clone the repository 
-```
-git clone https://github.com/sngjoy/sg_food_detector.git
-cd sg_food_detector
-```
-#### Step 2:
-Create environment with the required packages.
-
-```
-conda env create -f conda.yml
-```
-
-#### Step 3: 
-Run the app!
-```
-python src/app.py
-```
-Navigate to URL 
-```
-http://localhost:8000
-```
 ## About the Model
 ##### Model Architecture
 The model is adapted from the MobileNetV2 model. The fully connected layers from the MobileNetV2 are removed and replaced with a global average pooling layer, a dropout layer, four dense layers with ReLU activation and a final prediction layer with softmax activation.
@@ -74,9 +51,6 @@ Here is a breakdown of the number of images used in each class.
 | Tau Huay        | 64            | 
 
 Data augmentation is used to increase the size of the dataset. In this model, shearing up to 15 degree is used to allow the model to recognise images that are taken from different angles. 
-
-## Future Developments
-- Improve on the API design
 
 ## Author
 Joy Sng

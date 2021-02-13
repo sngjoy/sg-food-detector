@@ -104,13 +104,12 @@ class Model:
         df = pd.DataFrame(data=wrongly_classified_images)
         self.timestr = time.strftime("%Y%m%d-%H%M%S")
         df.to_csv(
-            f'/polyaxon-data/aiap7/workspace/joy_sng/assignment_5/wrongly_classified_images/wrongly_classified_images_{self.timestr}.csv', 
+            f'/wrongly_classified_images/wrongly_classified_images_{self.timestr}.csv', 
             index=False, 
             header=False
         )
 
-    def save_model(self, path):
+    def save_model(self, path=model/model.h5):
         """Save model in Polyaxon's persistence storage
         """
         self.model.save(path)
-        # self.model.save(f'./tensorfood_{self.timestr}.h5')
